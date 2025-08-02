@@ -1,0 +1,390 @@
+ul, body{
+    margin: 0;
+    padding: 0;
+    font-family: "Tiny5", sans-serif;
+    background: #FFFFF0;
+}
+nav{
+    margin-top: 20px;
+    border-top: #8AA624 dashed 4px;
+    border-bottom: #8AA624 dashed 4px;
+}
+#nav-bar{
+    margin: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li{
+    list-style-type: none;
+}
+a
+{
+    text-decoration: none;
+}
+.nav-item
+{
+    flex: 1;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.nav-item a{
+    color: #FEA405;
+}
+
+#logo{
+    font-family: "Bitcount", system-ui;
+    flex: 3;
+    font-weight: bolder;
+    text-align: end;
+    font-size: 32px;
+    font-variation-settings: "slnt" -8, "CRSV" 1, "ELSH" 44, "ELXP" 20;
+    color: #b7e800;
+}
+
+#main-container-home{
+    display: flex;
+    margin: 35px 0;
+    justify-content: center;
+    height: 60vh;
+}
+
+section{
+    margin: 0;
+}
+
+/* add task container */
+
+#task-header{
+    text-align: center;
+    color: #98a187;
+    border: #8AA624 5px outset;
+    margin: 0px 28%;
+    top: 22px;
+    position: relative;
+    background: #FFFFF0;
+    color: #a0bd34;
+}
+
+
+input[type="text"],
+[type="email"],
+[type="tel"],
+textarea{
+    border: #8aa624 double 3px;
+    margin-right: 3%;
+    background: #DBE4C9;
+    padding: 5px 20% 5px 3%;
+    border-radius: 5px;
+    font-family: "Tiny5", sans-serif;
+    font-size: 17px;
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover{
+  opacity: 0.7;
+}
+
+#add-task-container{
+    margin: -22px 0 0 0;
+    flex: 1;
+}
+.box-container{
+    padding: 10px;
+    margin: 0 5px 0 35px;
+    text-align: center;
+    border: solid 3px #44530a;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
+#add-input-feild{
+    display: flex;
+    justify-content: center;
+    margin-top: 14%;
+    margin-bottom: 7%;
+}
+
+button,input[type="submit"]{
+    padding: 5px 15px;
+    color: white;
+    background: #FEA405;
+    border: #f4bf54 outset 3px;
+    border-radius: 5px;
+    font-family: "Bitcount", system-ui;
+    font-variation-settings: "slnt" 0, "CRSV" 1, "ELSH" 50, "ELXP" 70;
+    font-size: 16px;
+    transition: 0.2s;
+}
+button:hover, button:focus{
+    background: #f4bf54;
+    cursor: pointer;
+}
+
+#priority-range-label{
+    color: #44530a;
+    font-size: 18px;
+}
+
+#priority-range{
+    appearance: none;
+    -webkit-appearance: none;
+    background: #DBE4C9;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    border-radius: 10px;
+    accent-color: #e69408;
+    min-width: 57%;
+    margin: 3% auto;
+    height: 1.5em;
+}
+
+#priority-range:hover {
+  opacity: 1;
+}
+
+#priority-range::-webkit-slider-thumb{
+    cursor: pointer;
+}
+
+#priority-range::-moz-range-thumb{
+    cursor: pointer;
+}
+
+
+/* task list container */
+
+#task-list-container{
+    margin: 0 35px 0 5px;
+    flex: 1;
+    padding: 0;
+    position: relative;
+    top: 14px;
+    height: 100%;
+}
+
+#task-list-headers{
+    display: flex;
+}
+
+h3{
+    flex: 1;
+    padding: 7px 0px;
+    border-bottom: ridge 3px #8aa624;
+    border-right: ridge 3px black;
+    width: 100%;
+    margin: 0;
+    border-radius: 2px;
+}
+
+.inActiveTab{
+    border-bottom: ridge 3px #8aa624;
+    background: #dbe4c9;
+    border-style: ridge;
+    color: #8d9480;
+    transition: 0.2s;
+}
+
+.activeTab{
+    border-right: ridge 3px black;
+    background: #f3f9e7;
+    box-shadow: inset -1px 4px 0px #dbe4c9;
+    border-bottom: inset 1px #f3f9e7;
+    border-style: inset;
+    border-width: 2px;
+    color: #a0bd34;
+    transition: 0.2s;
+}
+
+.inActiveTab:hover,.inActiveTab:focus{
+opacity: 0.7;
+}
+
+#task-list{
+    margin: 0 1em;
+    display: flex;
+    flex-direction:column;
+}
+#priority-text{
+    font-size: 13px;
+}
+
+.important{
+    color: red;
+}
+.normal{
+    color: #8AA624;
+}
+.low{
+    color: #f4bf54;
+}
+
+label input {
+  visibility: hidden;
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  overflow: hidden;
+}
+label
+{
+    margin-right: 1em;
+}
+label span {
+    height: 1em;
+    width: 1em;
+    border: 3px outset #8d9480;
+    display: inline-block;
+    position: relative;
+    top: 0.15em;
+    border-radius: 3px;
+}
+[type=checkbox]:checked + span{
+  background: url(../src/check.png);
+  background-size: cover;
+}
+
+.task-list-item{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    min-width: 40%;
+    padding-top: 0.7em;
+}
+.task-list-button{
+    border-color: #b0cd45;
+    background-color: #a0bd34;
+    padding: 5px;
+    height: 2.1em;
+    border-radius: 100%;
+    margin-right:1em;
+}
+
+.task-list-button.edit-button:hover, .task-list-button.edit-button:focus{
+    background: #b0cd45;
+    cursor: pointer;
+}
+.task-list-button.edit-button img, .task-list-button.delete-button img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.task-list-button.delete-button
+{
+    border-color: #f4bf54;
+    background: #e69408;   
+}
+
+.task-list-button.delete-button:hover, .task-list-button.delete-button:focus{
+    background: #f4bf54;
+    cursor: pointer;
+}
+
+footer{
+    text-align: center;
+}
+#footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#footer li{
+    padding-right: 1%;
+}
+
+.footer-icon{
+    height: 1em;
+    position: relative;
+    top: 0.2em;
+    margin-right: 0.2em;
+}
+
+.contact-links{
+    color: #8AA624;
+}
+
+/*About me page specific*/
+
+article{
+    display: flex;
+    padding: 70px 11%;
+    justify-content: space-between;
+    align-items: start;
+}
+
+#about-me-text p,
+#about-me-header{
+    display: inline;
+}
+
+#about-me-header{
+    font-size: 35px;
+    padding-right: 13px;
+}
+
+#about-me-text{
+    max-width: 65%;
+    height: fit-content;
+    font-size: 18px;
+    line-height: 1.3em;
+}
+
+
+#aboutme-pic{
+    width: 26%;
+}
+#aboutme-pic img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+#contact-me-header{
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
+form{
+    margin: 0 auto;
+    width: 80%;
+}
+#contact-me-text-input-container{
+    display: flex;
+}
+
+.column{
+    flex: 1;
+}
+
+form label{
+    font-size: 17px;
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 0.8em;
+    padding-bottom: 0.3em;
+}
+
+#name,#phone,#email,textarea{
+    display: block;
+    padding: .3em;
+    font-size: 20px;
+    resize: vertical;
+    width: 85%;
+    margin: 0 auto;
+}
+
+textarea{
+  min-height:180px;
+}
+
+form input[type="submit"]{
+    margin: 5% auto;
+    display: block;
+
+}

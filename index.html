@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="https://kit.fontawesome.com/daa612db23.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount:slnt,wght,CRSV,ELSH,ELXP@-8..0,100..900,0..1,0..100,0..100&family=Tiny5&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul id="nav-bar">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="./about.html">About</a></li>
+            <li id="logo">Task List</li>
+        </ul>
+    </nav>
+    <main id="main-container-home">
+        <section id="add-task-container">
+            <h2 id="task-header">Add Task</h2>
+            <div class="box-container" style="height: 87.5%;">
+                <div id="add-input-feild">
+                    <input type="text" required placeholder="Write a task" id="task-name">
+                    <button id="add-button">Add</button>
+                </div>
+                <label id="priority-range-label" for="priority-range">
+                    Choose priority
+                </label>
+                <input name="priority-range" type="range" min="1" max="3" value="2" id="priority-range">
+            </div>
+        </section>
+        <div class="box-container" id="task-list-container">
+            <section>
+                <div id="task-list-headers">
+                    <h3 id="undone-header" class="activeTab">Undone</h3> 
+                    <h3 id="done-header" class="inActiveTab">Done</h3>
+                </div>
+                <ul id="task-list">
+                    
+                </ul>
+            </section>
+        </div>
+    </main>
+<footer>
+    <ul id="footer">
+        <li id="contact-me">Contact me:- </li>
+        <li class="">
+            <img class="footer-icon" src="src/email.png"/>
+            <a href="mailto:lojain01k@gmail.com" target="_blank" class="contact-links" >Email</a>
+        </li>
+        <li>
+            <img class="footer-icon" src="src/linked.png"/>
+            <a href="https://www.linkedin.com/in/lujain-alkhatib/" target="_blank" class="contact-links" >Linked-in</a>
+        </li>
+        <li>
+            <img class="footer-icon" src="src/message.png"/>
+            <a href="./about.html#contact-me-header" target="_blank" class="contact-links" >Send message</a>
+        </li>
+    </ul>
+    <span> This project is coded by Lujain Khatib and is hosted on <a href="https://github.com/Lialliane/My-Tasks" class="contact-links" target="_blank" title="Github link for this site">Github</a></span>
+</footer>
+<script src="./js/app.js"></script>
+</body>
+</html>
